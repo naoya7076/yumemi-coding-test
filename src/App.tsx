@@ -7,7 +7,9 @@ export const App:React.FC = () => {
   return (
     <>
       <PrefsList setPrefCodes={setPrefCodes}/>
-      <PrefsPopulationChart prefCodes={prefCodes} />
+      <div style={{ height: '300px' }}>
+        {prefCodes.length > 0 && <PrefsPopulationChart prefCodes={prefCodes} />}
+      </div>
     </>
   )
 }
