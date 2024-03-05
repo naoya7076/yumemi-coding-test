@@ -8,7 +8,6 @@ export const BlogTable:React.FC = () => {
         const start = (page -1) * ITEMS_PER_PAGE
         return articles.slice(start, start + ITEMS_PER_PAGE)
     },[articles, page]);
-    // TODO: Prevで前に戻りまくっても記事が表示されること対応。
     return(
         <>
             <table>
@@ -20,7 +19,7 @@ export const BlogTable:React.FC = () => {
                     )}
                 </thead>
             </table>
-            <button onClick={() => setPage((page) => page - 1)}>Prev Page</button>
+            <button onClick={() => setPage((page) => page - 1)} disabled={page <= 1}>Prev Page</button>
             <button onClick={() => setPage((page) => page + 1)}>Next Page</button>
         </>
     )
