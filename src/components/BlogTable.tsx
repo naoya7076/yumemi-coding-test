@@ -8,6 +8,7 @@ export const BlogTable:React.FC = () => {
         const start = (page -1) * ITEMS_PER_PAGE
         return articles.slice(start, start + ITEMS_PER_PAGE)
     },[articles, page]);
+    // TODO: Prevで前に戻りまくっても記事が表示されること対応。
     return(
         <>
             <table>
