@@ -12,13 +12,11 @@ export const BlogTable:React.FC = () => {
         <>
             <table>
                 <thead>
-                    <tr>
-                        {displayArticles.map((article,index) =>
-                        <div>
-                            <th key={index}>{article.title}</th>
-                        </div>
+                    {displayArticles.map((article,index) =>
+                        <tr key={index}>
+                            <th>{article.title}</th>
+                        </tr>
                     )}
-                    </tr>
                 </thead>
             </table>
             <button onClick={() => setPage((page) => page - 1)}>Prev Page</button>
