@@ -5,26 +5,9 @@ import { PrefsPopulationChart } from './components/PrefsPopulationChart'
 import { SampleForm } from './components/SampleForm'
 import { BlogTable } from './components/BlogTable'
 import { UserProfileEditForm } from './components/UserProfileEditForm'
+import { userProfile } from './data/user'
 export const App:React.FC = () => {
   const [prefCodes, setPrefCodes] = useState<number[]>([]);
-  const userProfile = {
-    userName: {
-      defaultValue: 'hoge',
-      onChange: () => {}
-    },
-    mailAddress: {
-      defaultValue: 'hoge@google.com',
-      onChange: () => {}
-    },
-    language: {
-      defaultValue: 'ja',
-      onChange: () => {}
-    },
-    photoUrl: {
-      defaultValue: 'https://example.com/hoge.png',
-      onChange: () => {}
-    }
-  }
   return (
     <>
       <UserProfileEditForm {...userProfile} />
